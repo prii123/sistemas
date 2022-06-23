@@ -1,19 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package sistemas.GUI;
 import java.awt.Color;
 import java.sql.ResultSet;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import sistemas.models.empleadosBL;
+import sistemas.models.Persona;
 import sistemas.conexionDB.conexion;
 
-/**
- *
- * @author USUARIO
- */
 public class frmEmpleados extends javax.swing.JFrame {
     
     DefaultTableModel modelo;
@@ -245,13 +237,13 @@ public class frmEmpleados extends javax.swing.JFrame {
         // TODO add your handling code here:
         conexion objConexion = new conexion();
         
-        empleadosBL oEmpleados = recuperarDatosGUI();
-        
-        String strSentenciaInsert = String.format("INSERT INTO Empleados (ID, Nombre, Correo) "
-                + " VALUES (null, '%s', '%s')", oEmpleados.getNombre(), oEmpleados.getCorreo());
-        objConexion.ejecutarSentenciaSQL(strSentenciaInsert);
-        
-      
+//        Persona oEmpleados = recuperarDatosGUI();
+//        
+//        String strSentenciaInsert = String.format("INSERT INTO Empleados (ID, Nombre, Correo) "
+//                + " VALUES (null, '%s', '%s')", oEmpleados.getNombre(), oEmpleados.getCorreo());
+//        objConexion.ejecutarSentenciaSQL(strSentenciaInsert);
+//        
+//      
         this.mostrarDatos();
         this.limpiar();
     }//GEN-LAST:event_btnagregarActionPerformed
@@ -273,28 +265,28 @@ public class frmEmpleados extends javax.swing.JFrame {
     private void btnborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnborrarActionPerformed
         // TODO add your handling code here:
         
-        conexion objConexion = new conexion();
-        
-        empleadosBL oEmpleados = recuperarDatosGUI();
-        
-        String strSentenciaDelete = String.format("DELETE FROM Empleados WHERE ID=%d", oEmpleados.getID());
-        objConexion.ejecutarSentenciaSQL(strSentenciaDelete);
-        
+//        conexion objConexion = new conexion();
+//        
+//        Persona oEmpleados = recuperarDatosGUI();
+//        
+//        String strSentenciaDelete = String.format("DELETE FROM Empleados WHERE ID=%d", oEmpleados.getID());
+//        objConexion.ejecutarSentenciaSQL(strSentenciaDelete);
+//        
         this.mostrarDatos();
         this.limpiar();
     }//GEN-LAST:event_btnborrarActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
         // TODO add your handling code here:
-         conexion objConexion = new conexion();
-        
-        empleadosBL oEmpleados = recuperarDatosGUI();
-        
-        String strSentenciaInsert = String.format("UPDATE Empleados SET Nombre='%s', Correo='%s'"
-                +" WHERE ID=%d", oEmpleados.getNombre(), oEmpleados.getCorreo(), oEmpleados.getID());
-        objConexion.ejecutarSentenciaSQL(strSentenciaInsert);
-        
-      
+//         conexion objConexion = new conexion();
+//        
+//        Persona oEmpleados = recuperarDatosGUI();
+//        
+//        String strSentenciaInsert = String.format("UPDATE Empleados SET Nombre='%s', Correo='%s'"
+//                +" WHERE ID=%d", oEmpleados.getNombre(), oEmpleados.getCorreo(), oEmpleados.getID());
+//        objConexion.ejecutarSentenciaSQL(strSentenciaInsert);
+//        
+//      
         this.mostrarDatos();
     }//GEN-LAST:event_btneditarActionPerformed
 
@@ -365,16 +357,16 @@ public void limpiar(){
 }
 
 // esto es para hacer validacion de datos sobre todo el ID
-    public empleadosBL recuperarDatosGUI(){
-        empleadosBL oEmpleados = new empleadosBL();
-        int ID = (txtid.getText().isEmpty()?0 : Integer.parseInt(txtid.getText()));
-        
-        oEmpleados.setID(ID);
-        oEmpleados.setNombre(txtnombre.getText());
-        oEmpleados.setCorreo(txtcorreo.getText());
-        
-        return oEmpleados;
-    }
+//    public Persona recuperarDatosGUI(){
+//        Persona oEmpleados = new Persona();
+//        int ID = (txtid.getText().isEmpty()?0 : Integer.parseInt(txtid.getText()));
+//        
+//        oEmpleados.setID(ID);
+//        oEmpleados.setNombre(txtnombre.getText());
+//        oEmpleados.setCorreo(txtcorreo.getText());
+//        
+//        return oEmpleados;
+//    }
     /**
      * @param args the command line arguments
      */
