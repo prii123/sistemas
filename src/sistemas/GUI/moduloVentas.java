@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package sistemas.GUI;
 
 import java.awt.event.KeyEvent;
@@ -12,10 +8,6 @@ import javax.swing.table.DefaultTableModel;
 import sistemas.controllers.ContorllerModuloVENTAS;
 import sistemas.models.VentasFacturacion;
 
-/**
- *
- * @author USUARIO
- */
 public class moduloVentas extends javax.swing.JFrame {
 
     DefaultTableModel modelo;
